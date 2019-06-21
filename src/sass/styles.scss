@@ -1,4 +1,10 @@
 @import 'config/**/*.scss';
+@import './navigation';
+@import './banner';
+@import './main';
+@import './testimonial';
+@import './workWithUs';
+@import './footer';
 
 html {
   height: 100%;
@@ -8,4 +14,9 @@ html {
 body {
   font-size: 100%;
   display: flex;
+  background: white;
+}
+p {
+  color: #838685;
+  font-size: 0.8em;
 }

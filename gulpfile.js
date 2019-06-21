@@ -9,6 +9,7 @@ const babel = require('gulp-babel');
 const eslint = require('gulp-eslint');
 const stylelint = require('gulp-stylelint');
 const browserSync = require('browser-sync');
+const imagemin = require('gulp-imagemin');
 
 gulp.task('twig', () => {
   return gulp
@@ -60,13 +61,19 @@ gulp.task('browsersync', () => {
     }
   });
   gulp.watch(
-    ['src/sass/**/*.scss', 'src/js/*.js'],
+    ['src/sass/**/*.scss', 'src/js/*.js', 'src/templates/*.twig'],
     gulp.series('build', browserSync.reload)
   );
 });
 
-gulp.task('lint', gulp.parallel('stylelint', 'eslint'));
-gulp.task('build', gulp.parallel('twig', 'sass', 'babel'));
-gulp.task('server', gulp.series('build', gulp.parallel('browsersync')));
+gulp.task('images', () => {
+  return gulp
+    .src('src/images/**/*')
+    .pipe(imagemin({ optimizationLevel: 5 }))
+    .pipe(gulp.dest('dist'));
+});
 
+gulp.task('lint', gulp.parallel('stylelint', 'eslint'));
+gulp.task('build', gulp.parallel('twig', 'sass', 'babel', 'images'));
+gulp.task('server', gulp.series('build', gulp.parallel('browsersync')));
 gulp.task('default', gulp.series('lint', 'build'));

@@ -1,0 +1,41 @@
+.workWithUs {
+  position: absolute;
+  top: 1375px;
+  width: 100%;
+  height: 300px;
+  padding: 10px;
+  text-align: center;
+  background: url(workWithUsBanner.png);
+  h3 {
+    color: white;
+    font-size: 1.2em;
+    font-weight: normal;
+  }
+  h5 {
+    color: white;
+    font-weight: normal;
+    font-size: 0.83em;
+    line-height: 0;
+  }
+  fieldset {
+    border: none;
+  }
+  input {
+    padding: 6px;
+    border-radius: 2px;
+    box-shadow: none;
+    border: none;
+  }
+  textarea {
+    padding: 6px;
+    border-radius: 2px;
+    box-shadow: none;
+    border: none;
+  }
+  input[type='button'] {
+    background: rgb(239, 59, 0);
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+  }
+}
