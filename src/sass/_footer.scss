@@ -26,3 +26,38 @@
     color: #9a9696 !important;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .footer {
+    height: 313px;
+    top: 2100px;
+  }
+  .footer .leftSection {
+    text-align: center;
+    padding: 12px;
+    float: none;
+  }
+
+  .footer .rightSection {
+    text-align: center;
+    float: none;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .footer {
+    height: 100px;
+    top: 2140px;
+    padding: 12px 15px 0px 5px;
+  }
+  .footer .leftSection {
+    text-align: center;
+    padding: 12px;
+    float: none;
+  }
+
+  .footer .rightSection {
+    text-align: center;
+    float: none;
+  }
+}

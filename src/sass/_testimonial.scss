@@ -81,3 +81,49 @@
   display: inline-block;
   width: 30%;
 }
+
+@media only screen and (max-width: 480px) {
+  .testimonials {
+    top: 1375px;
+  }
+  .testimonial {
+    width: 100%;
+    padding: 10px;
+  }
+  .popup {
+    left: 0;
+  }
+  .popup .popuptext {
+    left: 0;
+  }
+  .float-my-children {
+    top: 180px;
+    margin-left: 0px;
+  }
+  .hide {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .testimonials {
+    top: 1440px;
+  }
+  .testimonial {
+    width: 100%;
+    padding: 10px;
+  }
+  .popup {
+    left: 0;
+  }
+  .popup .popuptext {
+    left: 0;
+  }
+  .float-my-children {
+    top: 180px;
+    margin-left: 0px;
+  }
+  .hide {
+    display: none;
+  }
+}

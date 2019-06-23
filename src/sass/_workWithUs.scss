@@ -39,3 +39,34 @@
     width: 100px;
   }
 }
+@media only screen and (max-width: 320px) {
+  .workWithUs {
+    top: 1710px;
+    height: 425px;
+    input[type='text'],
+    textarea {
+      width: 100%;
+      margin-top: 10px;
+    }
+    form {
+      height: 400px;
+    }
+    h5 {
+      line-height: 1.5em;
+    }
+  }
+}
+@media only screen and (max-width: 480px) {
+  .workWithUs {
+    top: 1675px;
+    height: auto;
+    input[type='text'],
+    textarea {
+      width: 100%;
+      margin-top: 10px;
+    }
+    form {
+      height: 400px;
+    }
+  }
+}

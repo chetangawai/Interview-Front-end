@@ -19,6 +19,8 @@ nav {
   font-size: 11pt;
   font-family: 'PT Sans', Arial, sans-serif;
   border-bottom: 2px solid #283744;
+  padding: 5px;
+  height: 50px;
 }
 
 nav ul {
@@ -58,10 +60,16 @@ nav li a {
 }
 .getInTouch {
   background-color: rgb(239, 59, 0);
-  padding: 6px;
+  padding: 3px;
   border-radius: 10px;
+  float: right;
+  margin-right: 15px;
+  height: 30px;
+  margin-top: 5px;
   a {
     color: white;
+    width: 110px;
+    line-height: 0;
   }
 }
 
@@ -81,7 +89,7 @@ nav a#pull {
 }
 .icon {
   position: relative;
-  top: 5px;
+  top: 4px;
   width: 16px;
   height: 16px;
   z-index: 88;
@@ -91,7 +99,7 @@ nav a#pull {
   background-image: url('logo.jpg');
   position: absolute;
   left: 35px;
-  top: 15px;
+  top: 20px;
   width: 128px;
   height: 13px;
   z-index: 76;
@@ -102,7 +110,7 @@ nav a#pull {
 
 @media screen and (max-width: 600px) {
   nav {
-    height: auto;
+    height: fit-content;
   }
   nav ul {
     width: 100%;
@@ -148,8 +156,30 @@ nav a#pull {
     height: 30px;
     display: inline-block;
     position: absolute;
-    right: 15px;
     top: 10px;
+  }
+  .logo {
+    background-image: url('logo.jpg');
+    position: absolute;
+    left: 145px;
+    top: 20px;
+    width: 128px;
+    height: 13px;
+    z-index: 76;
+  }
+  .getInTouch {
+    background: none;
+    padding: 6px;
+    margin-right: 0;
+    a {
+      width: 50px;
+    }
+    .icon {
+      top: 0;
+    }
+  }
+  .getInTouchText {
+    display: none;
   }
 }
 
@@ -161,5 +191,43 @@ nav a#pull {
   }
   nav li a {
     border-bottom: 1px solid #576979;
+  }
+  nav a#pull {
+    display: block;
+    background-color: #283744;
+    width: 100%;
+    position: relative;
+  }
+  nav a#pull:after {
+    content: '';
+    background: url('nav-icon.png') no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+  }
+  .logo {
+    background-image: url('logo.jpg');
+    position: absolute;
+    left: 100px;
+    top: 20px;
+    width: 128px;
+    height: 13px;
+    z-index: 76;
+  }
+  .getInTouch {
+    background: none;
+    padding: 6px;
+    margin-right: 10px;
+    a {
+      width: 50px;
+    }
+    .icon {
+      top: 0;
+    }
+  }
+  .getInTouchText {
+    display: none;
   }
 }
